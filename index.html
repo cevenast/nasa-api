@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<meta charset="utf-8">
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
@@ -16,30 +18,46 @@
 	</head>
 	<body>
 
-		
-
-
-
+		<!-- Nav Desktop -->
 		<nav class="nav-container">
 			<ul class="nav-item-list">
-				<a href=""><li class="nav-item">Astronomy Picture of the Day</li></a>
+				<a href="#usage"><li class="nav-item">Astronomy Picture of the Day</li></a>
 				<a href=""><li class="nav-item">Mars Rover Photos</li></a>
 				<a href=""><li class="nav-item">NASA Image and Video Library</li></a>
 			</ul>
 		</nav>
 
-		<header class="header-container">
-			<div class="star"></div>
-			<div class="background-gradient">
-				<!-- <section class="column column-left">
-				</section> -->
+		<!-- Hero Section -->
 
+		<header class="header-container">
+
+			<!-- Hamburger Nav -->
+
+			<div id="hamburger-menu">
+				<a href="javascript:void(0);" id="hamburger" onclick="myFunction()">
+				  <i class="fa fa-bars"></i>
+				</a>
+				<ul class="nav-item-list-hamburger">
+					<a href=""><li class="nav-item">Astronomy Picture of the Day</li></a>
+					<a href=""><li class="nav-item">Mars Rover Photos</li></a>
+					<a href=""><li class="nav-item">NASA Image and Video Library</li></a>
+				</ul>
+			</div>
+			
+			<!-- Shooting Star -->
+			<div class="star"></div>
+
+			<!-- Hero -->
+
+			<div class="background-gradient">
 				<section class="column">
 					<h1>NASA<br> Open<br> API</h1> 
 				</section>
-				
 			</div>
+
 		</header>
+
+		
 
 		<main>
 			<section id="usage">
@@ -58,24 +76,25 @@
 			</section>
 
 
-			<section>
-				<h2>NASA Astronomy Picture of the Day</h2>
+			<section id="apod">
+				<h2>Astronomy Picture of the Day</h2>
 				<span id="previous-day">Previous</span>
 				<input id="date-selector" type="date" value="">
 				<span id="next-day">next</span>
 
-				<h2 id="img-title"></h2>
-				<section style="display:flex; justify-content: space-evenly;">
-					<div class="img-container column">
-						<img id="async-image" style="width:400px;">
+				<h2 id="img-title-apod"></h2>
+				<section style="display:flow-root">
+					<div class="img-container">
+						<img id="async-image">
 					</div>					
-					<p id="explanation" class="column"></p>
+					<p id="explanation" class=""></p>
 				</section>
 
 
 			</section>
 		</main>
-		<footer style="height:600px;"></footer>
+		
+		<footer class="footer-container"></footer>
 
 
 		<script type="text/javascript" src="js/main.js"></script>

@@ -36,7 +36,7 @@ async function getNasaData(e){
     try{
         const response = await fetch(url)
         let data = await response.json()
-        document.querySelector('#img-title').innerText = data.title
+        document.querySelector('#img-title-apod').innerText = data.title
         document.querySelector('#async-image').alt = data.title
         document.querySelector('#async-image').src = data.url
         document.querySelector('#explanation').innerText = data.explanation
@@ -50,20 +50,13 @@ async function getNasaData(e){
 }
 
 
-    // fetch(url)
-    //     .then(res => res.json()) // parse response as JSON
-    //     .then(data => {
-    //         console.log(data)
-    //         if (data.media_type == 'image'){
-    //         document.querySelector('img').src = data.hdurl
-    //         }
-    //         else if (data.media_type == 'video'){
-    //         document.querySelector('iframe').src = data.url 
-    //         }
-    //         document.querySelector('h3').innerText = data.explanation
 
-    //     })
-    //     .catch(err => {
-    //         console.log(`error ${err}`)
-    //     });
-    // }
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+    const list = document.querySelector(".nav-item-list-hamburger");
+    if (list.style.display === "block") {
+      list.style.display = "none";
+    } else {
+      list.style.display = "block";
+    }
+  } 

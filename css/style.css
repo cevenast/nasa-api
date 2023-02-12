@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -44,6 +45,55 @@
   border-bottom:3px solid #2596be;
 }
 
+#hamburger-menu{
+  display:none
+}
+.nav-item-list-hamburger, #hamburger{
+  display:none;
+}
+
+@media screen and (max-width:950px){
+  #hamburger-menu{
+    display:block
+  }
+
+  #hamburger{
+    display:block;
+    position:absolute;
+    right:15px;
+    top:12px;
+    font-size:20px;
+  }
+  .header-container{
+    margin-top:0 !important;
+  }
+
+  .nav-container{
+    display:none;
+  }
+
+  .nav-item-list-hamburger{
+    margin:0;
+    padding-left:0;
+    background-color:rgb(0,39,80);
+    text-align:center;
+    padding-top: 40px;
+    }
+
+    .nav-item-list-hamburger .nav-item{
+      margin:0 auto;
+      height:30px;
+      width:fit-content;
+      color:white;
+    }
+}
+
+@media (min-width:950px){
+  .nav-item-list-hamburger{
+    display:none;
+  }
+}
+
 /* Header */
 
 .header-container{
@@ -65,14 +115,22 @@
   justify-content:center;
   border-right:solid 5px red;
   border-radius: 0 600px 0 0;
+}
 
-  
+@media screen and (max-width:700px){
+  .background-gradient{
+    border-left:solid 5px red;
+    border-bottom:solid 5px #2596be;
+    border-right: 0;
+    border-radius:600px 0px 0px 600px;
+
+  }
 }
 
 .column{
   height:300px;
   width:100%;
-  padding: 0 24rem 0 5rem;
+  padding: 0 300px 0 5rem;
 }
 
 h1{
@@ -81,7 +139,7 @@ h1{
   margin:0;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1100px){
   h1{
     text-align:left;
   }
@@ -107,17 +165,38 @@ h1{
 }
 
 /* Information Display */
-
+#apod{
+  text-align:center;
+}
 img{
   display: block;
   margin: 0 auto;
+  width:100%;
 }
 
 #img-title{
-  text-align:right;
+  text-align:center;
   padding-bottom:50px;
 }
 
+#explanation{
+  width:80%;
+  margin:0 auto;
+  text-align:justify;
+  padding: 20px 0;
+}
+
+.img-container{
+  width: 80%;
+  margin:0 auto; 
+}
+
+/* Footer */
+
+.footer-container{
+  background-color: rgb(73, 73, 73);
+  height:150px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -138,10 +217,10 @@ img{
 
 @keyframes shoot{
   10%{
-      transform: rotate(-30deg) translate(-1000px , 0);
+      transform: rotate(-30deg) translate(-1200px , 0);
   }
   100%{
-      transform: rotate(-30deg) translate(-1000px , 0);
+      transform: rotate(-30deg) translate(-1200px , 0);
   }
 }
 
@@ -161,6 +240,4 @@ a{
   text-decoration: none;
   color:inherit;
 }
-
-
 
