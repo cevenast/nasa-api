@@ -1,0 +1,166 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Nav */
+
+.nav-container{
+  position:fixed;
+  z-index:1;
+  top:0px;
+  height:48px;
+  width:100%;
+  background-color:whitesmoke;
+}
+
+.nav-item-list{
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+
+.nav-item{
+  list-style: none;
+  padding: 0 50px;
+  color:cadetblue;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.nav-item:hover{
+  color:#2596be;
+  border-bottom:3px solid #2596be;
+}
+
+/* Header */
+
+.header-container{
+  margin-top:48px;
+  background-image:url('../img/nasa-3.jpg');
+  filter:saturate(0.50);
+  filter:sepia(0.70);
+  background-attachment:scroll;
+  background-size: cover;
+  background-position:1% 25%;
+  background-size:cover;
+  color:white;
+}
+.background-gradient{
+  height:100%;
+  width:100%;
+  padding: 100px 0;
+  display:flex;
+  justify-content:center;
+  border-right:solid 5px red;
+  border-radius: 0 600px 0 0;
+
+  
+}
+
+.column{
+  height:300px;
+  width:100%;
+  padding: 0 24rem 0 5rem;
+}
+
+h1{
+  text-align:right;
+  font-size:3rem;
+  margin:0;
+}
+
+@media screen and (max-width:1000px){
+  h1{
+    text-align:left;
+  }
+
+}
+
+/* Selection */
+#usage{
+  text-align:center;
+  margin: 50px 0;
+}
+.api-cards{
+  padding-top: 50px;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.api-card{
+  width:15rem;
+  color:white;
+  background-color:rgb(95, 135, 136);
+  box-shadow: 10px 5px 5px #0e3847bd;;
+}
+
+/* Information Display */
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+#img-title{
+  text-align:right;
+  padding-bottom:50px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+ /* Shooting Star*/
+.star{
+  background-color: white;
+  width: 20px;
+  height: 2px;
+  position: absolute ;
+  top: 50px;
+  right: -200px;
+  animation: shoot 5s linear infinite;
+  opacity: 0.5;
+  transform: rotate(-30deg);
+}
+
+@keyframes shoot{
+  10%{
+      transform: rotate(-30deg) translate(-1000px , 0);
+  }
+  100%{
+      transform: rotate(-30deg) translate(-1000px , 0);
+  }
+}
+
+/* Buttons */
+
+html{
+  font-family:sans-serif;
+}
+
+
+
+h2{
+
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+
+

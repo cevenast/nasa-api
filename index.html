@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>APOD</title>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		
+
+
+
+		<nav class="nav-container">
+			<ul class="nav-item-list">
+				<a href=""><li class="nav-item">Astronomy Picture of the Day</li></a>
+				<a href=""><li class="nav-item">Mars Rover Photos</li></a>
+				<a href=""><li class="nav-item">NASA Image and Video Library</li></a>
+			</ul>
+		</nav>
+
+		<header class="header-container">
+			<div class="star"></div>
+			<div class="background-gradient">
+				<!-- <section class="column column-left">
+				</section> -->
+
+				<section class="column">
+					<h1>NASA<br> Open<br> API</h1> 
+				</section>
+				
+			</div>
+		</header>
+
+		<main>
+			<section id="usage">
+				<h2>How to use?</h2>
+				<section class="api-cards">
+
+					<section class="api-card">
+						<h3>Astronomy Picture of the Day</h3>
+						<p>Select the date of the picture you wanna retrieve. Dates must be between Jun 16, 1995 and </p>
+					</section>
+					
+					<section class="api-card"></section>
+					<section class="api-card"></section>
+	
+				</section>
+			</section>
+
+
+			<section>
+				<h2>NASA Astronomy Picture of the Day</h2>
+				<span id="previous-day">Previous</span>
+				<input id="date-selector" type="date" value="">
+				<span id="next-day">next</span>
+
+				<h2 id="img-title"></h2>
+				<section style="display:flex; justify-content: space-evenly;">
+					<div class="img-container column">
+						<img id="async-image" style="width:400px;">
+					</div>					
+					<p id="explanation" class="column"></p>
+				</section>
+
+
+			</section>
+		</main>
+		<footer style="height:600px;"></footer>
+
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
