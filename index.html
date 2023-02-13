@@ -12,6 +12,11 @@
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -21,9 +26,8 @@
 		<!-- Nav Desktop -->
 		<nav class="nav-container">
 			<ul class="nav-item-list">
-				<a href="#usage"><li class="nav-item">Astronomy Picture of the Day</li></a>
-				<a href=""><li class="nav-item">Mars Rover Photos</li></a>
-				<a href=""><li class="nav-item">NASA Image and Video Library</li></a>
+				<a href="#apod"><li class="nav-item">Astronomy Picture of the Day</li></a>
+				<a href="#mars-rover"><li class="nav-item">Mars Rover Curiosity</li></a>
 			</ul>
 		</nav>
 
@@ -38,9 +42,8 @@
 				  <i class="fa fa-bars"></i>
 				</a>
 				<ul class="nav-item-list-hamburger">
-					<a href=""><li class="nav-item">Astronomy Picture of the Day</li></a>
-					<a href=""><li class="nav-item">Mars Rover Photos</li></a>
-					<a href=""><li class="nav-item">NASA Image and Video Library</li></a>
+					<a href="#apod"><li class="nav-item">Astronomy Picture of the Day</li></a>
+					<a href="#mars-rover"><li class="nav-item">Mars Rover Curiosity</li></a>
 				</ul>
 			</div>
 			
@@ -57,41 +60,71 @@
 
 		</header>
 
-		
+		<!-- Main -->
+
 
 		<main>
+			<!-- Instructions -->
 			<section id="usage">
 				<h2>How to use?</h2>
 				<section class="api-cards">
 
 					<section class="api-card">
-						<h3>Astronomy Picture of the Day</h3>
-						<p>Select the date of the picture you wanna retrieve. Dates must be between Jun 16, 1995 and </p>
+						<h3>Choose an API</h3>
 					</section>
 					
-					<section class="api-card"></section>
-					<section class="api-card"></section>
+					<section class="api-card">
+						<h3>Select a date</h3>
+					</section>
+					<section class="api-card">
+						<h3>Get the data</h3>
+					</section>
 	
 				</section>
 			</section>
 
+			<!-- Astronomy Picture of the Day -->
 
 			<section id="apod">
 				<h2>Astronomy Picture of the Day</h2>
-				<span id="previous-day">Previous</span>
-				<input id="date-selector" type="date" value="">
-				<span id="next-day">next</span>
+				<p class="api-info">. Each day a different image or photograph of our universe is featured, along with a brief explanation written by a professional astronomer. Select a date between Jun 16, 1995 and <span id="todays-date"></span></p>
+				<!-- Date Selection -->
+				<button id="previous-day-apod" class="button"><< Previous</button>
+				<input id="date-selector-apod" type="date" value="">
+				<button id="next-day-apod" class="button">Next >></button>
+
+				<!-- Information Display -->
 
 				<h2 id="img-title-apod"></h2>
 				<section style="display:flow-root">
 					<div class="img-container">
-						<img id="async-image">
+						<a target="_blank" id="hd-img-apod" href=""> <img id="async-image"></a>	
 					</div>					
 					<p id="explanation" class=""></p>
 				</section>
-
-
 			</section>
+
+			<!-- Mars Rover -->
+
+			<section id="mars-rover">
+				<h2>Mars Rover Curiosity</h2>
+				<p class="api-info">Photographs taken by the Curiosity Mars Rover's Front Hazard Avoidance Camera. A set of images is taken everyday, and a representative one of them is show above, including the martial sol, or martian rotation day, in which it was taken, counting up from the rover's landing date. Select an earth day starting from June 7, 2012.</p>
+				<!-- Date Selection -->
+				<button id="previous-day-mr" class="button"><< Previous</button>
+				<input id="date-selector-mr" type="date" value="">
+				<button id="next-day-mr" class="button">Next >></button>
+
+				<!-- Information Display -->
+
+				<h2 id="img-title-mr"></h2>
+				<section style="display:flow-root">
+					<div class="img-container-mr">
+						<a target="_blank" id="hd-img-mr" href=""> <img id="async-image-mr"></a>	
+					</div>					
+					<p id="explanation-mr" class=""></p>
+				</section>
+			</section>
+
 		</main>
 		
 		<footer class="footer-container"></footer>

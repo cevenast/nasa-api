@@ -154,11 +154,13 @@ h1{
 .api-cards{
   padding-top: 50px;
   display:flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .api-card{
-  width:15rem;
+  margin: 0 8px;
+  width:10rem;
+  height:60px;
   color:white;
   background-color:rgb(95, 135, 136);
   box-shadow: 10px 5px 5px #0e3847bd;;
@@ -171,7 +173,8 @@ h1{
 img{
   display: block;
   margin: 0 auto;
-  width:100%;
+  max-height:400px;
+  max-width:70%;
 }
 
 #img-title{
@@ -180,14 +183,14 @@ img{
 }
 
 #explanation{
-  width:80%;
+  width:70%;
   margin:0 auto;
   text-align:justify;
   padding: 20px 0;
 }
 
 .img-container{
-  width: 80%;
+  width: 70%;
   margin:0 auto; 
 }
 
@@ -227,12 +230,20 @@ img{
 /* Buttons */
 
 html{
-  font-family:sans-serif;
+  font-family:'Roboto', sans-serif;
+}
+.button{
+  display:inline-block;
+  background-color:cadetblue;
+  padding:3px 10px;
+  margin:0 15px;
+  border-radius:10px;
+  font-weight:800;
 }
 
-
-
 h2{
+  padding-top:50px;
+  font-size:3rem;
 
 }
 
@@ -241,3 +252,15 @@ a{
   color:inherit;
 }
 
+#usage{
+  margin-bottom:150px;
+}
+#apod, #mars-rover{
+  background-color:rgb(241,245,249);
+  text-align:center;
+}
+
+.api-info{
+  width:70%;
+  margin:40px auto;
+}
