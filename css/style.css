@@ -50,11 +50,17 @@
 }
 .nav-item-list-hamburger, #hamburger{
   display:none;
+  color:gray;
 }
 
 @media screen and (max-width:950px){
   #hamburger-menu{
-    display:block
+    width:100%;
+    display:block;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:10;
   }
 
   #hamburger{
@@ -75,7 +81,7 @@
   .nav-item-list-hamburger{
     margin:0;
     padding-left:0;
-    background-color:rgb(0,39,80);
+    background-color: rgb(00,02,20);
     text-align:center;
     padding-top: 40px;
     }
@@ -133,6 +139,8 @@
   padding: 0 300px 0 5rem;
 }
 
+
+
 h1{
   text-align:right;
   font-size:3rem;
@@ -143,7 +151,9 @@ h1{
   h1{
     text-align:left;
   }
-
+  .column{
+    padding-right:0;
+  }
 }
 
 /* Selection */
@@ -158,12 +168,14 @@ h1{
 }
 
 .api-card{
+  position:relative;
   margin: 0 8px;
   width:10rem;
   height:60px;
   color:white;
   background-color:rgb(95, 135, 136);
-  box-shadow: 10px 5px 5px #0e3847bd;;
+  box-shadow: 10px 5px 5px #0e3847bd;
+  text-align:center;
 }
 
 /* Information Display */
@@ -177,13 +189,22 @@ img{
   max-width:70%;
 }
 
+@media screen and (max-width:600px) {
+  img{
+    margin:0 auto;
+    width:100%;
+    max-width:100%;
+  }
+}
+
+
 #img-title{
   text-align:center;
   padding-bottom:50px;
 }
 
 #explanation{
-  width:70%;
+  width:50%;
   margin:0 auto;
   text-align:justify;
   padding: 20px 0;
@@ -192,6 +213,15 @@ img{
 .img-container{
   width: 70%;
   margin:0 auto; 
+  min-width:650px;
+}
+
+@media screen and (max-width:600px) {
+  .img-container, .img-container-mr{
+    margin:0 auto;
+    width:95%;
+    min-width:0;
+  }
 }
 
 /* Footer */
@@ -239,12 +269,19 @@ html{
   margin:0 15px;
   border-radius:10px;
   font-weight:800;
+  cursor:pointer;
 }
 
 h2{
   padding-top:50px;
   font-size:3rem;
+  margin-top: 0;
+}
 
+@media screen and (max-width:1200px){
+  h2{
+    font-size:2rem;
+  }
 }
 
 a{
@@ -255,12 +292,54 @@ a{
 #usage{
   margin-bottom:150px;
 }
-#apod, #mars-rover{
+#apod{
   background-color:rgb(241,245,249);
   text-align:center;
 }
 
+#mars-rover{
+  background-color:white;
+  text-align:center;
+}
+
 .api-info{
-  width:70%;
+  width:50%;
   margin:40px auto;
+  text-align: justify;
+}
+
+@media screen and (max-width:760px){
+  .api-info, #explanation{
+    width:90%;
+  }
+}
+
+.number-card{
+  background-color: rgb(64, 56, 49);
+  box-shadow: 5px 5px 5px gray;
+  position:absolute;
+  width:20px;
+  left:-5px;
+  top:-5px;
+  color:white;
+  font-weight: 600;
+}
+
+.api-card h3{
+  margin: 0;
+  line-height:20px;
+}
+
+.instruction-container{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width:400px){
+  .change-day-text{
+    display:none;
+  }
 }

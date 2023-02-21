@@ -31,22 +31,21 @@
 			</ul>
 		</nav>
 
+		<!-- Hamburger Nav -->
+		<div id="hamburger-menu">
+			<a href="javascript:void(0);" id="hamburger" onclick="myFunction()">
+			  <i class="fa fa-bars"></i>
+			</a>
+			<ul class="nav-item-list-hamburger">
+				<a href="#apod" onclick="myFunction()"><li class="nav-item">Astronomy Picture of the Day</li></a>
+				<a href="#mars-rover" onclick="myFunction()"><li class="nav-item">Mars Rover Curiosity</li></a>
+			</ul>
+		</div>
+
 		<!-- Hero Section -->
 
 		<header class="header-container">
 
-			<!-- Hamburger Nav -->
-
-			<div id="hamburger-menu">
-				<a href="javascript:void(0);" id="hamburger" onclick="myFunction()">
-				  <i class="fa fa-bars"></i>
-				</a>
-				<ul class="nav-item-list-hamburger">
-					<a href="#apod"><li class="nav-item">Astronomy Picture of the Day</li></a>
-					<a href="#mars-rover"><li class="nav-item">Mars Rover Curiosity</li></a>
-				</ul>
-			</div>
-			
 			<!-- Shooting Star -->
 			<div class="star"></div>
 
@@ -70,14 +69,23 @@
 				<section class="api-cards">
 
 					<section class="api-card">
-						<h3>Choose an API</h3>
+						<span class="number-card">1</span>
+						<div class="instruction-container">
+							<h3>Choose an API</h3>
+						</div>
 					</section>
 					
 					<section class="api-card">
-						<h3>Select a date</h3>
+						<span class="number-card">2</span>
+						<div class="instruction-container">
+							<h3>Select a date</h3>
+						</div>
 					</section>
 					<section class="api-card">
-						<h3>Get the data</h3>
+						<span class="number-card">3</span>
+						<div class="instruction-container">
+							<h3>Get the data</h3>
+						</div>
 					</section>
 	
 				</section>
@@ -87,11 +95,11 @@
 
 			<section id="apod">
 				<h2>Astronomy Picture of the Day</h2>
-				<p class="api-info">. Each day a different image or photograph of our universe is featured, along with a brief explanation written by a professional astronomer. Select a date between Jun 16, 1995 and <span id="todays-date"></span></p>
+				<p class="api-info">Each day a different image or photograph of our universe is featured, along with a brief explanation written by a professional astronomer. Select a date between Jun 16, 1995 and <span id="todays-date"></span></p>
 				<!-- Date Selection -->
-				<button id="previous-day-apod" class="button"><< Previous</button>
+				<button id="previous-day-apod" class="button"><< <span class="change-day-text">Previous</span></button>
 				<input id="date-selector-apod" type="date" value="">
-				<button id="next-day-apod" class="button">Next >></button>
+				<button id="next-day-apod" class="button"><span class="change-day-text">Next</span> >></button>
 
 				<!-- Information Display -->
 
@@ -108,11 +116,11 @@
 
 			<section id="mars-rover">
 				<h2>Mars Rover Curiosity</h2>
-				<p class="api-info">Photographs taken by the Curiosity Mars Rover's Front Hazard Avoidance Camera. A set of images is taken everyday, and a representative one of them is show above, including the martial sol, or martian rotation day, in which it was taken, counting up from the rover's landing date. Select an earth day starting from June 7, 2012.</p>
+				<p class="api-info">Photographs taken by the Curiosity Mars Rover's Front Hazard Avoidance Camera. A set of images is taken everyday, and a representative one of them is shown below, including the martial sol, or martian rotation day, in which it was taken, counting up from the rover's landing date. Select an earth day starting from June 7, 2012.</p>
 				<!-- Date Selection -->
-				<button id="previous-day-mr" class="button"><< Previous</button>
+				<button id="previous-day-mr" class="button"><< <span class="change-day-text">Previous</span></button>
 				<input id="date-selector-mr" type="date" value="">
-				<button id="next-day-mr" class="button">Next >></button>
+				<button id="next-day-mr" class="button"><span class="change-day-text">Next</span> >></button>
 
 				<!-- Information Display -->
 
